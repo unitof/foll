@@ -1,11 +1,17 @@
 const url = require('url')
 const { http } = require('follow-redirects')
 
-const testURL = 'http://test.com'
+let inputUrl = 'test.com'
 
-const options = url.parse(testURL)
-options.beforeRedirect = (options, {headers}) => {
-  console.log(options)
+if (!/^https?:\/\//i.test(inputUrl)) {
+  inputUrl = 'http://' + inputUrl
 }
 
-http.request(options)
+console.log('inputUrl', inputUrl)
+
+const options = url.parse(inputUrl)
+options.beforeRedirect = (options, {headers}) => {
+  console.log(headers)
+}
+
+inputUrl.startsWith('https://') ? https.get(options) : http.get(options)
