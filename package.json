@@ -1,0 +1,19 @@
+{
+  "name": "foll",
+  "version": "0.0.1",
+  "description": "Command line tool to inspect an HTTP redirect chain",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unitof/foll.git"
+  },
+  "author": "Jacob Ford <j@cobford.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unitof/foll/issues"
+  },
+  "homepage": "https://github.com/unitof/foll#readme"
+}
