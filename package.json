@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/unitof/foll/issues"
   },
-  "homepage": "https://github.com/unitof/foll#readme"
+  "homepage": "https://github.com/unitof/foll#readme",
+  "dependencies": {
+    "follow-redirects": "^1.14.4",
+    "url": "^0.11.0"
+  }
 }
