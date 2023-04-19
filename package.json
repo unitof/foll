@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/unitof/foll#readme",
   "dependencies": {
-    "follow-redirects": "^1.14.4",
+    "follow-redirects": "^1.15.2",
     "url": "^0.11.0"
   }
 }
