@@ -10,8 +10,17 @@ if (!/^https?:\/\//i.test(inputUrl)) {
 console.log('inputUrl', inputUrl)
 
 const options = url.parse(inputUrl)
+options.trackRedirects = true
 options.beforeRedirect = (options, {headers}) => {
   console.log(headers)
+  console.log(options.statusCode)
 }
 
-inputUrl.startsWith('https://') ? https.get(options) : http.get(options)
+inputUrl.startsWith('https://') ? https.get(options, response => {handleResponse(response)}) : http.get(options, response => {handleResponse(response)})
+
+function handleResponse(response) {
+  response.on('connect', chunk => {
+    console.log('connect')
+    console.log(chunk)
+  })
+}
